@@ -3,7 +3,8 @@
 <div class="top-container">
     <div class="featured-article-outer-container">
         <div class="featured-article-container-main-page">
-            {% set main_page_article = (articles | selectattr('featured', 'eq', 'True') | first) %}
+            {% set featured_articles = articles | selectattr('featured', 'eq', 'True') | list %}
+            {% set main_page_article = featured_articles[0] if featured_articles else articles[0] %}
             <div class="featured-article-thumbnail">
                 {% set thumbnail = main_page_article.cover %}
                 {% if not thumbnail %}
