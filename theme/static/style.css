@@ -274,6 +274,8 @@ html, body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     padding: 10px 10px 0;
     height: 100%;
+    color: inherit;
+    text-decoration: none;
 }
 
 .featured-article-container-main-page p:first-of-type {

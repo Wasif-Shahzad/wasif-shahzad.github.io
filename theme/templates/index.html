@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="top-container">
+    {% set featured_articles = articles | selectattr('featured', 'eq', 'True') | list %}
+    {% set main_page_article = featured_articles[0] if featured_articles else articles[0] %}
     <div class="featured-article-outer-container">
-        <div class="featured-article-container-main-page">
-            {% set featured_articles = articles | selectattr('featured', 'eq', 'True') | list %}
-            {% set main_page_article = featured_articles[0] if featured_articles else articles[0] %}
+        <a class="featured-article-container-main-page" href="{{ SITEURL }}/{{ main_page_article.url }}">
             <div class="featured-article-thumbnail">
                 {% set thumbnail = main_page_article.cover %}
                 {% if not thumbnail %}
@@ -16,7 +16,7 @@
             <p class="main-page-featured-article-title">
                 {{ main_page_article.title }}
             </p>
-        </div>
+        </a>
     </div>
 </div>
 {% include 'middle.html' %}
