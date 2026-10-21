@@ -725,6 +725,7 @@ html, body {
 
     .post-cover {
         aspect-ratio: 519 / 319;
+        min-height: 54dvh;
     }
 }
 
