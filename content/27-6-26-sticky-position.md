@@ -5,7 +5,7 @@ Tags: Frontend, Web-dev, css
 Authors: Wasif Shahzad
 Summary: Explaining how sticky positioning creates cool scrolling effects.
 Slug: smooth-scrolling-with-sticky-positioning-in-css
-Featured: True
+Featured: False
 
 This is my first day of writing blogs. A series where I make a commitment to myself to write a blog each morning about what I learnt the day before so I can reiterate things and consolidate my learning.
 
@@ -23,4 +23,4 @@ Sticky positioning is a hybrid between `fixed` and `relative` position. It switc
 
 For example, It can look like the container is `fixed` on the screen. But, when the scrolling position is reaching its bottom it goes above and switches to `relative` positioning creating a nice *behind the curtain* like scrolling animation. An animation similar to that on the linked template in Paragraph #2.
 
-> Updating this on 23rd July, `sticky` positioning needs one of the `top, bottom, left, right` property to work otherwise, it doesn't work. So, keep that in mind and don't be dumb like me :) 
+> Updating this on 23rd July, `sticky` positioning needs one of the `top, bottom, left, right` property to work otherwise, it doesn't work. So, keep that in mind and don't be dumb like me :)
