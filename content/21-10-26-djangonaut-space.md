@@ -16,6 +16,8 @@ We have had two team meetings with our Navigator, [Velda Kiara](https://github.c
 
 In the first meeting, Velda briefed us with a small set of issues filtered out for this session and I picked [this issue](https://github.com/django-commons/django-debug-toolbar/issues/2455). Unfortunately, I could not get to work too much on it during week-1 (zero index weeks lol) because I was travelling to Islamabad to participation in NASCON '26, held at FAST NUCES, Islamabad. I only got 15-20 minutes to investigate what was going on and hereafter I will try to explain the issue and what I have found so far.
 
+> The issue referred here is  [#2455](https://github.com/django-commons/django-debug-toolbar/issues/2455). Thanks to our Navigator Velda, who suggested me to add the link to this issue.
+
 I tried to reproduce the bug locally and succesfully did this. In the history tab, when we use the "switch" button to switch to a different URL in the history, the subtitle under the "History" in the tabs doesn't **switch**. I used the example app provided in the Django Debug Toolbar to investigate this. It has only 2 URLs, `/` and `/__debug__`. When I switched by *changing* the URL in the search bar, it switches correctly but when I used the "switch" button, it did not work as intended.
 
 Because, I was working on the example app, my approach to find the place where the bug is happening was to trace it from the example app. Therefore, I opened the template, found the history template. It further used a separate template for each `history_tr` so I opened that and saw that the following code is responsible for the "switch" button.
