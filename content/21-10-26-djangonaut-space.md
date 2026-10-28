@@ -1,10 +1,10 @@
-Title: Djangonaut Space Session 7 so far...
+Title: Djangonaut Space Session 7 so far... (Log 1)
 Date: 2026-10-21 09:20
 Category: Open-Source Software, Django, Django Debug Toolbar, Djangonaut Space
 Tags: Django, Djangonaut-Space
 Summary: How my first 2 weeks at Djangonaut space session 7 have gone.
 Featured: True
-Cover: images/djangonaut-space-astrolaptop.png
+<!--Cover: images/djangonaut-space-astrolaptop.png-->
 
 It has been two weeks since Djangonaut space started and I wanted to post this blog from so long but couldn't due to other commitments but I am here writing this now.
 
