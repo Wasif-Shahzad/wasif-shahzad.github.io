@@ -34,3 +34,5 @@ Because, I was working on the example app, my approach to find the place where t
 My next task is to go to the URLs for the example app and find where the `djdt:history_sidebar` URL leads to and investigate the issue further.
 
 I will investigate it further today and write a follow up blog tomorrow or as soon as possible, but my goal is to get the PR open by the end of this week if nothing goes wrong!
+
+[Continue reading the next Log]({filename}28-10-26-djangonaut-log2.md)
