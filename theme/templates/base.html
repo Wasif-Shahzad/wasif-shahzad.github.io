@@ -24,15 +24,17 @@
         <a href="#">About</a>
       </nav>
       <div class="title-container">
-        <nav class="desktop">
-          <a class="{% if current_page == 'index' %}active{% endif %}" href="{{ SITEURL }}/">Home</a>
-          <a class="{% if articles_active %}active{% endif %}" href="{{ SITEURL }}/articles.html">Articles</a>
-          <a href="#">About</a>
-        </nav>
-        <div class="main-title">
-          <p class="title">The Wasif Report</p>
-          <img src="./theme/w-with-umbrella.png" alt="Logo">
-          <p class="subtitle">Stories of deep dives, broken builds and everyday breakthroughs</p>
+        <div class="title-viewport">
+          <nav class="desktop">
+            <a class="{% if current_page == 'index' %}active{% endif %}" href="{{ SITEURL }}/">Home</a>
+            <a class="{% if articles_active %}active{% endif %}" href="{{ SITEURL }}/articles.html">Articles</a>
+            <a href="#">About</a>
+          </nav>
+          <div class="main-title">
+            <p class="title">The Wasif Report</p>
+            <img src="./theme/w-with-umbrella.png" alt="Logo">
+            <p class="subtitle">Stories of deep dives, broken builds and everyday breakthroughs</p>
+          </div>
         </div>
         <div class="title-footer scroll-animation">
           <p>
