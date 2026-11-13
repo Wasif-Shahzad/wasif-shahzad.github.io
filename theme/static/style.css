@@ -347,7 +347,7 @@ html, body {
     border-radius: 24px
 }
 
-.middle-container .scroll-animation .heading {
+.middle-container :is(.scroll-animation, .archive-content) .heading {
     font-size: 48px;
     font-weight: 600;
     letter-spacing: -0.512px;
@@ -355,63 +355,164 @@ html, body {
     text-align: center;
 }
 
-.middle-container .scroll-animation .latest-articles {
+.middle-container :is(.scroll-animation, .archive-content) .latest-articles {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.middle-container .scroll-animation .latest-articles h3 {
+.middle-container :is(.scroll-animation, .archive-content) .latest-articles h3 {
     font-weight: 600;
     font-size: 24px;
     margin-bottom: 0;
 }
 
-.middle-container .scroll-animation .latest-articles h4 {
+.middle-container :is(.scroll-animation, .archive-content) .latest-articles h4 {
     font-weight: 400;
     font-size: 15px;
 }
 
-.middle-container .scroll-animation .latest-articles .article-content h4 {
+.middle-container :is(.scroll-animation, .archive-content) .latest-articles .article-content h4 {
     margin-top: 10px;
 }
 
-.middle-container .scroll-animation .latest-articles .article-title .bottom-content {
+.middle-container :is(.scroll-animation, .archive-content) .latest-articles .article-title .bottom-content {
     display: flex;
     gap: 20px;
 }
 
-.middle-container .scroll-animation .latest-articles .article-title .bottom-content a {
+.middle-container :is(.scroll-animation, .archive-content) .latest-articles .article-title .bottom-content a {
     color: inherit;
     font-weight: 500;
 }
 
-.middle-container .scroll-animation .article-title {
+.middle-container :is(.scroll-animation, .archive-content) .article-title {
     border-bottom: 2px dashed #E9F9B2;
     display: flex;
     align-items: center;
     gap: 25px;
 }
 
-.middle-container .scroll-animation .article-title .index {
+.middle-container :is(.scroll-animation, .archive-content) .article-title .index {
     font-family: "Xanh Mono", sans-serif;
     font-size: 104px;
     font-weight: 400;
 }
 
-.middle-container .scroll-animation .article-title .article-content {
+.middle-container :is(.scroll-animation, .archive-content) .article-title .article-content {
     display: flex;
     flex-direction: column;
 }
 
-.middle-container .scroll-animation .article-title:first-of-type {
+.middle-container :is(.scroll-animation, .archive-content) .article-title:first-of-type {
     border-top: 2px dashed #E9F9B2;
 }
 
-.middle-container .scroll-animation #read-more {
+.middle-container :is(.scroll-animation, .archive-content) #read-more {
     color: inherit;
     text-align: center;
     font-weight: 500;
+}
+
+.archives-container {
+    box-sizing: border-box;
+    min-height: 100dvh;
+    position: relative;
+}
+
+.archive-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 758px;
+    min-width: 0;
+}
+
+.archive-content .heading {
+    margin: 0;
+    scroll-margin-top: 100px;
+}
+
+.archive-content .article-title {
+    padding: 24px 0;
+}
+
+.archive-content .article-title .index {
+    flex-shrink: 0;
+}
+
+.archive-content .article-title .article-content {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.archive-content .article-content h3 {
+    margin-top: 0;
+}
+
+.archive-content a {
+    color: inherit;
+    text-underline-offset: 4px;
+}
+
+.archive-content h3 a {
+    text-decoration: none;
+}
+
+.archive-content a:hover {
+    text-decoration: underline;
+}
+
+.archive-content a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 5px;
+}
+
+.archive-content .article-title .bottom-content {
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px 20px;
+}
+
+.archive-content .bottom-content h4 {
+    margin-bottom: 0;
+}
+
+.archive-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .archives-container {
+        padding: 64px 20px;
+    }
+
+    .archives-container .archive-content .heading {
+        font-size: 32px;
+    }
+
+    .archives-container .archive-content .article-title {
+        gap: 16px;
+    }
+
+    .archives-container .archive-content .article-title .index {
+        font-size: 56px;
+    }
+
+    .archives-container .archive-content .article-content h3 {
+        font-size: 20px;
+    }
+
+    .archives-container .archive-content .article-title .bottom-content {
+        gap: 8px;
+    }
 }
 
 .cat-hello {

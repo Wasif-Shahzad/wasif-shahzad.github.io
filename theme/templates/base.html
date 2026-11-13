@@ -17,7 +17,7 @@
   </head>
   <body class="{% block body_class %}{% endblock %}">
     {% set current_page = page_name|default('') %}
-    {% set articles_active = current_page == 'articles' or article is defined %}
+    {% set articles_active = current_page in ['articles', 'archives'] or article is defined %}
     <div class="parent-container">
       <nav class="mobile">
         <a class="{% if current_page == 'index' %}active{% endif %}" href="{{ SITEURL }}/">Home</a>

@@ -3,12 +3,37 @@
 {% block title %}{{ SITENAME|striptags }} - Archives{% endblock %}
 
 {% block content %}
-    <h2>Archives for {{ SITENAME }}</h2>
-
-    <dl>
-        {% for article in dates %}
-            <dt>{{ article.locale_date }}</dt>
-            <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
-        {% endfor %}
-    </dl>
+<section class="middle-container archives-container" aria-labelledby="archives-heading">
+    <div class="archive-content">
+        <h1 class="heading" id="archives-heading">All articles</h1>
+        <div class="latest-articles">
+            {% for article in dates_page.object_list %}
+                <div class="article-title">
+                    <div class="index" aria-hidden="true">{{ '%02d'|format(dates_page.start_index() + loop.index0) }}</div>
+                    <div class="article-content">
+                        <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+                        <div class="bottom-content">
+                            <h4><time datetime="{{ article.date.isoformat() }}">{{ article.date|strftime('%d %B %Y') }}</time></h4>
+                            <h4 aria-hidden="true">|</h4>
+                            <h4><a href="{{ SITEURL }}/{{ article.url }}" aria-label="Read {{ article.title|striptags|e }}">Read this...</a></h4>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <p>No articles yet. Check back soon.</p>
+            {% endfor %}
+        </div>
+        {% if dates_page.has_other_pages() %}
+            <nav class="archive-pagination" aria-label="Archive pagination">
+                {% if dates_previous_page %}
+                    <a href="{{ SITEURL }}/{{ dates_previous_page.url }}#archives-heading" rel="prev">&larr; Previous</a>
+                {% endif %}
+                <span>Page {{ dates_page.number }} of {{ dates_paginator.num_pages }}</span>
+                {% if dates_next_page %}
+                    <a href="{{ SITEURL }}/{{ dates_next_page.url }}#archives-heading" rel="next">Next &rarr;</a>
+                {% endif %}
+            </nav>
+        {% endif %}
+    </div>
+</section>
 {% endblock %}
