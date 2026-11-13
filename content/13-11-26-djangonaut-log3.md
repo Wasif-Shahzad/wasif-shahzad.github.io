@@ -57,7 +57,7 @@ And you probably already know that this is the condition which blocks `HistoryPa
 
 You might think that inside the if, we can find a way to recognize if its `HistoryPanel` or `RedirectsPanel`. Then render the button, add to `context` and that's it? Its this easy? Why is the fool writing this trying to overexplain?
 
-Well, calm down sir... And because of your rant I am forced to write this next sentence in CAPS. YOU ARE ABSOLUTELY WRONG. (If you did not rant you can ofcourse ignore this XD)
+Well, calm down reader... And because of your rant I am forced to write this next sentence in CAPS. YOU ARE ABSOLUTELY WRONG. (If you did not rant you can ofcourse ignore this XD)
 
 What happens when you **only** add the `panel_button` to the context and don't add any `panel_content` is that the entire Panel disappears and only its button stays. Well... that's what you coded by *removing `panel_content`, didn't you?*
 
